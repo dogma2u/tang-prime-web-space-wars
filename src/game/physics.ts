@@ -604,9 +604,9 @@ export function createInitialState(): GameState {
   return s;
 }
 export function step(s: GameState, btn: Buttons): void {
-  // Board DIP5: down = test (level). Match clears it.
-  if (demoMode(s)) s.testMode = btn.dip5Down;
-  else s.testMode = false;
+  // Web DIP5: toggle on press. Match clears it.
+  if (!demoMode(s)) s.testMode = false;
+  else if (btn.dip5Toggle) s.testMode = !s.testMode;
   if (demoMode(s) && !s.testMode && btn.fire && !s.firePrev) {
     startMatch(s);
   }

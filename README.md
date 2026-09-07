@@ -37,9 +37,9 @@ npm run preview
 | S3 thrust | `W` / `↑` | Thrust |
 | S4 fire | `Space` / `K` | Fire |
 | S0 hyperspace | `Shift` / `H` / `Z` | Hyper |
-| DIP5 down (test) | `5` / `T` | DIP5 |
+| DIP5 test (toggle) | `5` / `T` | DIP5 |
 
-On boot the board (and this sim) runs an **attract demo**: both ships are AI. Press **Fire** to start a 1:30 match. Hold **DIP5** (`5` / `T`) in attract for **test mode** (fly the Diamond; AI frozen; Fire shoots instead of starting). Release DIP5 to return to normal attract. Match start clears test mode.
+On boot the board (and this sim) runs an **attract demo**: both ships are AI. Press **Fire** to start a 1:30 match. Press **DIP5** (`5` / `T`) to **toggle** attract **test mode** (fly the Diamond; AI frozen; Fire shoots instead of starting). Press again to leave test. Match start clears test mode. (On the Dock, DIP5 is a physical switch that stays up/down.)
 
 ## What matches the FPGA (1.01.DONE)
 
@@ -51,7 +51,7 @@ On boot the board (and this sim) runs an **attract demo**: both ships are AI. Pr
 - 10 shots into the sun → black hole; 5 player shots restore the sun with 10 s outward push
 - Scores, lives (3 start / 5 max), 15 s fuel, `MM×100+SS` timer (fields 0…59, max **59:59**)
 - Attract, GAME OVER, PUSH FIRE TO START, hyperspace vanish/warp/flash
-- DIP5 attract test (down = test), same as Dock pin T5
+- DIP5 attract test (web: toggle with `5` / `T`; Dock: switch down = test)
 - AI ~5° heading bins (`ratio32` / `want_facing`), not 90° cardinal snaps
 - Ship max speed **10** (all modes); spawn Manhattan sep ≥200; AI post-spawn thrust spurt
 - Constellation star catalog and random pan

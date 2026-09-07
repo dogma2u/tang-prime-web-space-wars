@@ -10,7 +10,7 @@ export function emptyButtons(): Buttons {
     thrust: false,
     fire: false,
     hyper: false,
-    dip5Down: false,
+    dip5Toggle: false,
   };
 }
 export function createInput(): InputController {
@@ -32,8 +32,8 @@ export function sample(input: InputController): Buttons {
     thrust: input.held.thrust || input.pulse.thrust,
     fire: input.held.fire || input.pulse.fire,
     hyper: input.held.hyper || input.pulse.hyper,
-    // Level like Dock DIP5 (held only; no edge pulse)
-    dip5Down: input.held.dip5Down,
+    // Edge only: each press toggles attract test in physics
+    dip5Toggle: input.pulse.dip5Toggle,
   };
   input.pulse = emptyButtons();
   return out;
@@ -51,9 +51,9 @@ const KEY_MAP: Record<string, keyof Buttons> = {
   ShiftRight: "hyper",
   KeyH: "hyper",
   KeyZ: "hyper",
-  Digit5: "dip5Down",
-  Numpad5: "dip5Down",
-  KeyT: "dip5Down",
+  Digit5: "dip5Toggle",
+  Numpad5: "dip5Toggle",
+  KeyT: "dip5Toggle",
 };
 const BLOCK_SCROLL = new Set([
   "ArrowLeft",
@@ -78,6 +78,8 @@ export function bindKeyboard(input: InputController): () => void {
     if (BLOCK_SCROLL.has(e.code)) e.preventDefault();
     const bind = KEY_MAP[e.code];
     if (!bind) return;
+    // DIP5 is a toggle: ignore OS key-repeat
+    if (bind === "dip5Toggle" && e.repeat) return;
     e.preventDefault();
     press(input, bind, true);
   };

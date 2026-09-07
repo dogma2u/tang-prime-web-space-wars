@@ -4,8 +4,8 @@ export type Buttons = {
   thrust: boolean;
   fire: boolean;
   hyper: boolean;
-  /** Dock DIP5 down = attract test (board: dip5_test = ~dip5_n). */
-  dip5Down: boolean;
+  /** Rising edge this frame: toggle attract test (web DIP5 pad/key). */
+  dip5Toggle: boolean;
 };
 export type Shot = {
   on: boolean;

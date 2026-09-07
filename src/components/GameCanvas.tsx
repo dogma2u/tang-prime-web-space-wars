@@ -149,7 +149,7 @@ export function GameCanvas() {
       </div>
       <p className="max-w-[880px] px-2 text-center text-sm text-muted-foreground">
         {demo
-          ? "Attract demo is running both ships. Press Fire to start a 1:30 match. Hold DIP5 (5 / T) for attract test mode (fly Diamond; Fire shoots)."
+          ? "Attract demo is running both ships. Press Fire to start a 1:30 match. Press DIP5 (5 / T) to toggle attract test mode (fly Diamond; Fire shoots)."
           : "Fly the green Diamond. The yellow wedge is the AI. Shoot the sun ten times to collapse it."}
       </p>
       <div className="grid w-full max-w-[880px] grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
@@ -185,9 +185,11 @@ export function GameCanvas() {
         />
         <PadButton
           label="DIP5"
-          sub="5 / T · test"
-          held={held.dip5Down}
-          onHold={(d) => setBtn("dip5Down", d)}
+          sub="5 / T · toggle"
+          held={hud.mode.includes("test")}
+          onHold={(d) => {
+            if (d) setBtn("dip5Toggle", true);
+          }}
         />
       </div>
     </div>

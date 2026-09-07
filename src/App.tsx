@@ -30,7 +30,7 @@ export default function App() {
             <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
               <li>S1 / S2 rotate · S3 thrust · S4 fire</li>
               <li>S0 hyperspace (vanish, warp, flash)</li>
-              <li>DIP5 down = attract test (keys 5 / T)</li>
+              <li>DIP5 = toggle attract test (keys 5 / T)</li>
               <li>Keys: A/D or arrows, W or ↑, Space, Shift</li>
             </ul>
           </div>
