@@ -1,8 +1,10 @@
 # Space Wars — Tang Primer 20K browser sim
 
+**Project page:** https://k9dtv.com/project-web-space-wars.html
+
 ## Play now (web)
 
-**[Launch the playable web version](https://dogma2u.github.io/tang-prime-web-space-wars/)**
+**[Launch the playable web version](https://k9dtv.com/space-wars-web/)** ([GitHub Pages mirror](https://dogma2u.github.io/tang-prime-web-space-wars/))
 
 Open that link to run the game in your browser (no install, no FPGA board). Attract demo starts on load — press **Fire** (`Space` / `K`) for a 1:30 match.
 
