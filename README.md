@@ -2,8 +2,6 @@
 
 **Project page:** https://k9dtv.com/project-web-space-wars.html
 
-**Keywords:** K9DTV, k9dtv.com, James Burney, dogma2u, embedded systems, electronics, FPGA, Space Wars, Sipeed Tang Primer 20K, Gowin, Verilog, browser game, MiniMe, ESP32-S3, Discord bot, OLED, Hello World 3D, RP2350, SSD1306, Lissajous, Raspberry Pi Pico, MicroPython, Pimoroni, Wi-Fi demo, PDSP1880, 3-bank display, Arduino Pro Mini, AD9850, DDS, signal generator, rotary encoder
-
 ## Play now (web)
 
 **[Launch the playable web version](https://k9dtv.com/space-wars-web/)** ([GitHub Pages mirror](https://dogma2u.github.io/tang-prime-web-space-wars/))
